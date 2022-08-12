@@ -1,38 +1,25 @@
 import commonPage from './common.page';
 
 class MainPage {
-  // Sign Up by OnTryForFree with valid credentials
-  enterValidEmailToSighUpInput = (email) => {
+  // TC-001, TC-002 Sign Up by OnTryForFree with valid and invalid credentials
+  enterEmailIntoSighUpInput = (email) => {
     cy.get('input[name="email"]').type(email);
   };
-  checkEnteredValidEmailInSighUpInput = (email) => {
+  checkEnteredEmailInSighUpInput = (email) => {
     cy.get('input[name="email"]').should('have.value', email);
   };
   clickOnTryForFreeButton = () => {
     cy.get('[type="submit"]').click();
   };
 
-  checkEnteredValidEmailInEmailInput = (email) => {
-    cy.get('[id="email"]').should('have.value', email);
+  // TC-003, TC-004 Sign Up by click on the "Sign Up" button with valid and invalid credentials
+  clickOnSignUpButton = () => {
+    cy.get('li div a[href="/sign-up"]').click();
   };
 
-  checkRedirectionToSignUpPage = () => {
-    cy.url().should('include', 'sign-up');
-  };
-
-  //   // Sign Up by OnTryForFree with unvalid credentials
-  //   enterInvalidEmailToSighUpInput = () => {
-  //     cy.get('input[name="email"]').type(commonPage.invalidUserData['testEmail']);
-  //   };
-  //   checkEnteredInvalidEmailInSighUpInput = () => {
-  //     cy.get('input[name="email"]').should(
-  //       'have.value',
-  //       commonPage.invalidUserData['testEmail']
-  //     );
-  //   };
-  //   clickOnTryForFreeButton = () => {
-  //     cy.get('[type="submit"]').click();
-  //   };
+  // enterInvalidEmailIntoSighUpInput = () => {
+  //   cy.get('input[name="email"]').type(commonPage.invalidUserData['testEmail']);
+  // };
 
   //   // Footer
   //   checkFooterProductsMenuItemsName(position, itemName) {

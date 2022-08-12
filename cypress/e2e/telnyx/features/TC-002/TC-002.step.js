@@ -8,6 +8,7 @@ import {
   And,
 } from '@badeball/cypress-cucumber-preprocessor';
 import mainPage from '../../pages/main.page';
+import signUpPage from '../../pages/signUp.page
 
 Given('I go to telnyx.com main page', () => {
   cy.viewport(1920, 1080);
@@ -22,18 +23,18 @@ And('If the cookies modal window is opened I close it', () => {
 });
 When('I fill the email input field with invalid data {}', (email) => {
   console.log(email);
-  mainPage.enterValidEmailToSighUpInput(email);
+  mainPage.enterEmailIntoSighUpInput(email);
   this.testEmail = email;
 });
 And('Check if the entered email is valid', () => {
-  mainPage.checkEnteredValidEmailInSighUpInput(this.testEmail);
+  mainPage.checkEnteredEmailInSighUpInput(this.testEmail);
 });
 Then('Click the “Try for free ->” button', () => {
   mainPage.clickOnTryForFreeButton();
 });
 And('Check if the entered data in email field is displayed', () => {
-  mainPage.checkEnteredValidEmailInEmailInput(this.testEmail);
+  signUpPage.checkEnteredDataIntoEmailInput(this.testEmail);
 });
 And('Check the redirection to SignUp page', () => {
-  mainPage.checkRedirectionToSignUpPage();
+  signUpPage.checkRedirectionToSignUpPage();
 });

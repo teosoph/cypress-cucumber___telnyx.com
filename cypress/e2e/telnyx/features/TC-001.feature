@@ -1,5 +1,4 @@
-Feature: Test case 1 (TС-001)  
-
+Feature: Test case 001 (TС-001)  
 Scenario: Check registration possibility through `Try for free ->` field with valid credentials
 
 Given I go to telnyx.com main page
