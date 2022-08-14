@@ -22,16 +22,15 @@
     "url": "https://github.com/teosoph/cypress-cucumber___telnyx.com"
   },
   "homepage": "https://github.com/teosoph/cypress-cucumber___telnyx.com#readme",
-  "dependencies": {
-    "cypress-real-events": "^1.7.1"
-  },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^12.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
     "@cucumber/cucumber": "^8.5.1",
     "cypress": "^10.4.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-real-events": "^1.7.1",
     "cypress-xpath": "^1.8.0",
+    "faker": "^6.6.6",
     "multiple-cucumber-html-reporter": "^1.21.4"
   },
   "cypress-cucumber-preprocessor": {

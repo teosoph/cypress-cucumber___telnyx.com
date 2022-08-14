@@ -27,11 +27,11 @@ When('I click on the the "Sign Up" button in the header', (email) => {
 And('Check that the "Sign Up" page is opened', () => {
   signUpPage.checkSignUpPageOpened();
 });
-Then('I fill all input fields with valid credentials', () => {
-  signUpPage.fillInputsFieldsWithValidCredentials();
+Then('I fill all input fields with invalid credentials', () => {
+  signUpPage.fillInputsFieldsWithInvalidCredentials();
 });
-And('Check that the entered data is displayed and valid', () => {
-  signUpPage.checkEnteredValidData();
+And('Check that the entered data is displayed and invalid', () => {
+  signUpPage.checkEnteredInvalidData();
 });
 When('I click the “Sign Up” button', () => {
   signUpPage.clickSignUpButton();

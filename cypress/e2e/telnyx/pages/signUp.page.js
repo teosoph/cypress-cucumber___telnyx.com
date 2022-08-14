@@ -14,7 +14,7 @@ class SignUpPage {
     cy.url({ timeout: 20000 }).should('include', 'sign-up');
     cy.contains("button[type='submit']", 'Create Account').should('be.visible');
   };
-
+  // Valid credentials
   fillInputsFieldsWithValidCredentials = () => {
     cy.get('[id="email"]').type(commonPage.validUserData['workEmail']);
     cy.get('[id="full_name"]').type(commonPage.validUserData['fullName']);
@@ -34,6 +34,25 @@ class SignUpPage {
       .should('have.value', commonPage.validUserData['password']);
   };
 
+  // Invalid credentials
+  fillInputsFieldsWithInvalidCredentials = () => {
+    cy.get('[id="email"]').type(commonPage.invalidUserData['workEmail']);
+    cy.get('[id="full_name"]').type(commonPage.invalidUserData['fullName']);
+    cy.get('[id="password"]').type(commonPage.invalidUserData['password']);
+    cy.get('[aria-labelledby="terms-label"] rect').click();
+  };
+  checkEnteredInvalidData = () => {
+    cy.get('[id="email"]')
+      .should('be.visible')
+      .should('have.value', commonPage.invalidUserData['workEmail']);
+    cy.get('[id="full_name"]')
+      .should('be.visible')
+      .should('have.value', commonPage.invalidUserData['fullName']);
+    cy.get('[id="password"]')
+      .should('be.visible')
+      .should('have.value', commonPage.invalidUserData['password']);
+  };
+
   clickSignUpButton = () => {
     cy.get('button[type="submit"]').scrollIntoView().click({ force: true });
     // cy.get('button[type="submit"]').trigger("mouseover");
@@ -51,11 +70,13 @@ class SignUpPage {
     );
   };
 
-  // TC-00....................
-  checkRedirectionToTermsAndConditionsPage = () => {
+  // TC-006
+  checkRedirectionToTermsPage = () => {
     cy.get('[href="/terms-and-conditions-of-service"]')
       .invoke('removeAttr', 'target')
       .click();
+  };
+  checkMessagePresenceOnPage = () => {
     cy.get('h1[class*="Text"]').should(
       'have.text',
       'TELNYX TERMS AND CONDITIONS OF SERVICE'

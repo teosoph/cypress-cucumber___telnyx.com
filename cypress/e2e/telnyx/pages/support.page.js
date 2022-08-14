@@ -1,15 +1,23 @@
-import commonPage from "../pages/common.page";
+import commonPage from '../pages/common.page';
 
 class SupportPage {
   checkSupportPageTitle = () => {
-    cy.get('[class="header__headline"]').should("have.text", "Support Center");
+    cy.get('[class="header__headline"]').should('have.text', 'Support Center');
   };
 
   fillSearchInput() {
-    cy.get('[class*="search__input"]').type(commonPage.getRandomData()).type("{enter}");
+    cy.get('[class*="search__input"]')
+      .type(commonPage.getRandomData())
+      .type('{enter}');
+  }
+  pressEnterButton() {
+    cy.get('[class*="search__input"]').type('{enter}');
   }
   checkSearchInputData = () => {
-    cy.get('[class="c__light"]').should("have.text", commonPage.getRandomData());
+    cy.get('[class="c__light"]').should(
+      'have.text',
+      commonPage.getRandomData()
+    );
   };
 }
 
