@@ -26,6 +26,12 @@ This project is for e2e testing the functionality of the Telnyx website.
 
 `npm install cypress --save-dev`
 
+`npm install --save-dev @cucumber/cucumber`
+
+- To make Xpath be working is needed to be installed:
+
+`npm i cypress-xpath`
+
 - To make mouseHover be working is needed to be installed RealHover by Dmitriy Kovalenko:
 
 `npm install cypress-real-events`
@@ -41,7 +47,7 @@ This project is for e2e testing the functionality of the Telnyx website.
 - Open the project folder in VSCode or another IDE
 
 The test scripts are located at:
-cypress\e2e\telnyx\specs/\*.cy.js
+cypress\e2e\telnyx\features\TC-0\*/\*.cy.js
 
 The page objects are in:
 cypress\e2e\telnyx\pages/\*.page.js
