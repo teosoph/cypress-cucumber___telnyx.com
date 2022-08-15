@@ -33,8 +33,8 @@ And('Check that the Waiting List page is opened', () => {
 Then('Click on the “JOIN THE WAITING” button', () => {
   waitListPage.clickOnJoinWaitListButton();
 });
-Then('Fill valid credentials to all fields', () => {
-  waitListPage.fillWaitListUserInalidData();
+Then('Fill invalid credentials to all fields', () => {
+  waitListPage.fillWaitListUserInvalidData();
 });
 And('Mark the “Receive Telnyx Marketing Emails” check-box', () => {
   waitListPage.markReceiveTelnyxMarketingEmailsCheckbox();

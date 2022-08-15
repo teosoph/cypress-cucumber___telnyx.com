@@ -48,7 +48,9 @@ class MainPage {
   mouseHoverOnHeaderMenuTabs(tabPosition) {
     cy.get(`header div>ul>li:nth-child(${tabPosition})>span`, {
       timeout: 30000,
-    }).realHover();
+    }).realHover({
+      timeout: 30000,
+    });
   }
   makeHoveredHeaderMenuTabsScreenshot(tabPosition) {
     cy.xpath(`//header/div[2]/div/div[2]/ul/li[1]/div/div/div[2]`, {

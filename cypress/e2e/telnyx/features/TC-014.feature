@@ -1,5 +1,7 @@
 Feature: Test case 014 (TС-014)  
-Scenario:  Checking the ability of registration to Waiting List through the link "JOIN THE WAITING" with invalid credentials
+Scenario:  Check the registrartion ability by clicking  the "Create a free trial account" button in the “Switch + Save with Telnyx” block
+
+
 
 Given I go to telnyx.com main page
 And If the cookies modal window is opened I close it

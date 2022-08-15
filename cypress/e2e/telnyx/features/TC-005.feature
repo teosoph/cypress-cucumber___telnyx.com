@@ -5,5 +5,5 @@ Given I go to telnyx.com main page
 And If the cookies modal window is opened I close it
 
 When I check if all menu sections have the necessary tabs
-Then I see all the necessary tabs in footer menu
+# Then I see all the necessary tabs in footer menu
 
