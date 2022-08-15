@@ -65,7 +65,7 @@ class SignUpPage {
 
   checkMessageOnVerifyEmailPage = () => {
     cy.get('div>h1').should(
-      'have.text',
+      'not.contain.text',
       "We've sent you an email to activate your account"
     );
   };

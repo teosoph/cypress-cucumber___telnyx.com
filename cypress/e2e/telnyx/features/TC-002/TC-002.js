@@ -8,7 +8,7 @@ import {
   And,
 } from '@badeball/cypress-cucumber-preprocessor';
 import mainPage from '../../pages/main.page';
-import signUpPage from '../../pages/signUp.page
+import signUpPage from '../../pages/signUp.page';
 
 Given('I go to telnyx.com main page', () => {
   cy.viewport(1920, 1080);
