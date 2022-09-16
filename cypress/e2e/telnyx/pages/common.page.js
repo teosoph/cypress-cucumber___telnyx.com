@@ -6,7 +6,7 @@ class CommonPage {
   string = '';
   mathRandom = Math.random() * 15;
 
-  getRandomData(mathRandom) {
+  generateRandomData(mathRandom) {
     if (mathRandom > 1) {
       for (let i = 0; i <= mathRandom; i++) {
         this.string +=

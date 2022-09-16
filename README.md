@@ -14,15 +14,28 @@ This project is for e2e testing the functionality of the Telnyx website.
 
 - Download and install [at least Node.js 14](https://nodejs.org/uk/download/)
 
-### Installing
+### Usage
+
+### How to open and run a project
+
+- Download or clone project from repository
+
+- Open the project folder in VSCode or another IDE
+
+The test scripts are located at:
+cypress\e2e\telnyx\features\TC-0\*/\*.cy.js
+
+The page objects are in:
+cypress\e2e\telnyx\pages/\*.page.js
 
 - In terminal type:
+  git clone
 
-`npm install`
+`cd /your/project/path`
 
 `npm init -y`
 
-`cd /your/project/path`
+`npm install`
 
 `npm install cypress --save-dev`
 
@@ -40,17 +53,7 @@ This project is for e2e testing the functionality of the Telnyx website.
 
 `import "cypress-real-events/support";`
 
-#### How to open and run a project
-
-- Download or clone project from repository
-
-- Open the project folder in VSCode or another IDE
-
-The test scripts are located at:
-cypress\e2e\telnyx\features\TC-0\*/\*.cy.js
-
-The page objects are in:
-cypress\e2e\telnyx\pages/\*.page.js
+#
 
 ##### Run
 
@@ -59,4 +62,4 @@ cypress\e2e\telnyx\pages/\*.page.js
 `./node_modules/.bin/cypress open` or `npx cypress open`
 
 - After a while, the cypress will open.
-- In the window that opens, click on any of the tests: \*.cy.js
+- In the window that opens, click on any of the tests: \*.feature
